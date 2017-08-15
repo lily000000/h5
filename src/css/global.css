@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/*翻页*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: top; }
+
+ul li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/* 公共样式 */
+.wp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.page {
+  font-size: 72px;
+  line-height: 320px;
+  text-align: center; }
+
+.page1 {
+  background: url(../../image/bg-fir.png) center no-repeat;
+  background-size: cover; }
+
+.page2 {
+  background: url(../../image/bg2.png) center no-repeat;
+  background-size: cover; }
+
+.page3 {
+  background: url(../../image/bg2.png) center no-repeat;
+  background-size: cover; }
+
+.page4 {
+  background: url(../../image/bg3.png) center no-repeat;
+  background-size: cover; }
+
+.page5 {
+  background: url(../../image/bg4.png) center no-repeat;
+  background-size: cover; }
+
+.page6 {
+  background: url(../../image/bg5.png) center no-repeat;
+  background-size: cover; }
+
+.page7 {
+  background: url(../../image/bg-last.jpg) center no-repeat;
+  background-size: cover; }
+
+/* 第一页内容 */
+.logo {
+  position: fixed;
+  width: 1.03rem;
+  height: .27rem;
+  right: .4rem;
+  top: 1.7rem; }
+  .logo img {
+    width: 100%; }
+
+.wrap2 {
+  width: 5.48rem;
+  margin: auto; }
+  .wrap2 .tit {
+    width: 5.48rem;
+    height: .72rem;
+    margin-top: 4.5rem; }
+    .wrap2 .tit img {
+      width: 100%; }
+
+/* 箭头 */
+@-webkit-keyframes start {
+  0%, 30% {
+    opacity: 0.2;
+    -webkit-transform: translate(0, 10px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0); }
+  100% {
+    opacity: 0.2;
+    -webkit-transform: translate(0, -5px); } }
+
+@keyframes start {
+  0%, 30% {
+    opacity: 0.2;
+    transform: translate(0, 10px); }
+  60% {
+    opacity: 1;
+    transform: translate(0, 0); }
+  100% {
+    opacity: 0.2;
+    transform: translate(0, -5px); } }
+
+.start {
+  position: fixed;
+  left: 50%;
+  margin-left: -17px;
+  top: 95%;
+  margin-top: -34px;
+  width: 34px;
+  height: 34px; }
+
+.start b {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  margin-left: -9px;
+  width: 19px;
+  height: 12px;
+  background: url(img/arrow.png);
+  background-size: 100% 100%;
+  -webkit-animation: start 1.5s infinite ease-in-out;
+  animation: start 1.5s infinite ease-in-out; }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+	<meta content="yes" name="app-moblie-web-app-capable">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no"> 
+	<title>宣传页</title>
+	<link rel="stylesheet" type="text/css" href="src/css/master.css">
+	<link rel="stylesheet" type="text/css" href="src/css/global.css">
+	<link rel="stylesheet" type="text/css" href="src/css/zepto.fullpage.css">
+	<link rel="stylesheet" type="text/css" href="src/css/animate.css">
+	<style type="text/css">
+		.hk{opacity:0;animation: hk 2s steps(1) forwards;}
+		@keyframes hk{
+		  0% {
+		    transform: translate(0,0,);
+		    opacity: 0;
+		    filter: blur(0px);
+		  }
+			 100% {
+			    
+			    transform: translate(-1rem,-1rem);
+			    opacity: 1;
+			    filter: blur(0px);
+			  }
+		}
+	</style>
+</head>
+<body>
+	<div class="wp">
+	    <div class="wp-inner">
+	        <div class="page page1">
+	            <div class="wrap1">
+	            	<!-- <div class="logo js-animate animated" data-animate="pulse">
+	            		<img src="image/logo.png">	
+	            	</div>	
+	            	<div class="wrap2">
+	            		<div class="tit"><img src="image/fir-tit.png" class="animated pulse delay-point1"></div>
+	            	</div> -->
+	            	<div class="animated bounce ">动画</div>
+	            	<div class="animated hk">动画</div>
+
+	            </div>
+	        </div>
+	        <div class="page page2">2</div>
+	        <div class="page page3">3</div>
+	        <div class="page page4">4</div>
+	        <div class="page page5">5</div>
+	        <div class="page page6">6</div>
+	        <div class="page page7">7</div>
+	    </div>
+	</div>
+	<span class="start"><b></b></span>	
+</body>
+<script type="text/javascript" src='js/myrem.js'></script>
+<script type="text/javascript" src='js/zepto.js'></script>
+<script type="text/javascript" src='js/zepto.fullpage.js'></script>
+<script>
+   $('.wp-inner').fullpage({
+         change: function (e) {
+             // 移除动画属性
+             $('.page').eq(e.cur).find('.js-animate').each(function() {
+                 $(this).removeClass($(this).data('animate')).hide();
+             });
+         },
+         afterChange: function (e) {
+             // 添加动画属性
+             $('.page').eq(e.cur).find('.js-animate')
+                 .each(function () {
+                     $(this).addClass($(this).data('animate')).show();
+                 });
+         }
+     });
+</script>
+</html>
